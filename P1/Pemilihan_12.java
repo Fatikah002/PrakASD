@@ -20,10 +20,14 @@ public static void main(String[] args) {
     nilaiUts = sc12.nextDouble();
     System.out.print("Masukkan Nilai UAS   : ");
     nilaiUas = sc12.nextDouble();
+    System.out.println("==============================");
+    System.out.println("==============================");
 
     if (nilaiTugas < 0 || nilaiTugas > 100 || nilaiKuis < 0 || nilaiKuis > 100 ||
     nilaiUts < 0 || nilaiUts > 100 || nilaiUas < 0 || nilaiUas > 100) {
     System.out.println("Nilai tidak valid");
+    System.out.println("==============================");
+    System.out.println("==============================");
     return;
 }
     nilaiAkhir = (nilaiTugas * 0.2) + (nilaiKuis * 0.2) + (nilaiUts * 0.3) + (nilaiUas * 0.3);
@@ -51,21 +55,22 @@ public static void main(String[] args) {
         nilaiHuruf = "D";
         hasil = "TIDAKLULUS";
        } 
-       else if (nilaiAkhir >= 0) {
+       else if(nilaiAkhir >= 0) {
         nilaiHuruf = "E";
         hasil = "TIDAKLULUS";
        }
        else {
         nilaiHuruf = "Nilai tidak valid";
-        hasil = "";     
+        hasil ="";   
+        System.out.println();  
+        
        }
-       System.out.println("==============================");
-       System.out.println("==============================");
+    
        System.out.println("Nilai Akhir : " + nilaiAkhir);
        System.out.println("Nilai Huruf : " + nilaiHuruf);
+       System.out.println("==============================");
+       System.out.println("==============================");
        System.out.println(hasil);
-       System.out.println("==============================");
-       System.out.println("==============================");
-
+       
 }   
 }
