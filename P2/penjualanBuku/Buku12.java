@@ -1,8 +1,11 @@
 package P2.penjualanBuku;
+
+
 public class Buku12 {
 
     String judul, pengarang;
     int halaman, stok, harga;
+
     
     void tampilInformasi(){
         System.out.println("Judul: " + judul);
@@ -19,9 +22,9 @@ public class Buku12 {
                 if (stok == 0) {
                     System.out.println("\nStok buku habis");
                    }   }
-        else {
+        
+        }else {
             System.out.println("\nStok buku tidak cukup");
-        }
         }
     }
 
@@ -33,5 +36,5 @@ public class Buku12 {
         harga = hrg;
     }
 
-    
+      
 }
