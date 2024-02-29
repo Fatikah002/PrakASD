@@ -10,9 +10,9 @@ public class BukuMain12 {
         bk1.harga = 71000;
         
         bk1.tampilInformasi();
-        bk1.terjual(8);
+        bk1.terjual(14);
         bk1.gantiHarga(60000);
-        bk1.tampilInformasi();
+        
 
         Buku12 bk2 = new Buku12();
         bk2.judul = "How to Train Your Dragon";
@@ -21,8 +21,8 @@ public class BukuMain12 {
         bk2.stok = 0;
         bk2.harga = 275000;
 
-        bk2.terjual(0);
+        
+        bk2.terjual(4);
         bk2.tampilInformasi();
-        bk2.gantiHarga(60000);
     }
 }
