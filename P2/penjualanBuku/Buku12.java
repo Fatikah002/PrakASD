@@ -41,5 +41,35 @@ public class Buku12 {
         harga = hrg;
     }
 
-      
+    void hitungHargaTotal(int terbeli){
+        int hargaTotal = terbeli * harga;
+        System.out.println("Total harga: " + hargaTotal);
+    }
+    
+    void hitungDiskon(int terbeli){
+        int hargaTotal = terbeli * harga;
+        double diskon = 0;
+
+        if (hargaTotal > 150000) {
+            diskon = 0.12;
+        } else if (hargaTotal >= 75000) {
+            diskon = 0.05;
+        }
+        double totalDiskon = hargaTotal * diskon;
+        System.out.println("Diskon: Rp " + totalDiskon);
+    }
+    void hitungHargaBayar(int terbeli){
+        int hargaTotal = terbeli * harga;
+        double diskon = 0;
+
+        if (hargaTotal > 150000) {
+            diskon = 0.15;
+        } else if (hargaTotal >= 75000) {
+            diskon = 0.05;
+        }
+
+        double totalDiskon = hargaTotal * diskon;
+        double hargaBayar = hargaTotal - totalDiskon;
+        System.out.println("Harga Bayar: Rp " + hargaBayar);
+    }
 }
