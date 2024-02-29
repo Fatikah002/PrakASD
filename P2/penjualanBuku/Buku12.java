@@ -20,7 +20,7 @@ public class Buku12 {
                     System.out.println("\nStok buku habis");
                    }   }
         else {
-            System.out.println("Stok buku tidak cukup");
+            System.out.println("\nStok buku tidak cukup");
         }
         }
     }
