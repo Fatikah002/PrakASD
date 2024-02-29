@@ -13,6 +13,8 @@ public class BukuMain12 {
         bk2.terjual(4);
         bk2.tampilInformasi();
 
-        
+        Buku12 bukuFatikah = new Buku12("pergi", "Fatikah Salsabilla",312, 5, 80000);
+        bukuFatikah.terjual(2);
+        bukuFatikah.tampilInformasi();
     }
 }
