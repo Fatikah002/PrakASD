@@ -25,6 +25,8 @@ public class Segitiga12 {
 
         for (int i = 0; i < 4; i++) {
             System.out.println("sgArray ke-" + i + "    alas: " + sgArray12[i].alas + ", tinggi: " + sgArray12[i].tinggi);
+            System.out.println("Luas Segitiga     : " + sgArray12[i].hitungLuas());
+            System.out.println("Keliling Segitiga : " + sgArray12[i].hitungKeliling());
     }
   }
 }
