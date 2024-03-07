@@ -34,5 +34,9 @@ public class ArrayObjects12 {
                 System.out.println("Panjang: " + ppArray[i][j].panjang + ", lebar: " + ppArray[i][j].lebar);
             }
         }
+
+        //Persegi
+        Persegi12[] pgArray = new Persegi12[100];
+        pgArray[5].sisi = 20;
     }
 }
