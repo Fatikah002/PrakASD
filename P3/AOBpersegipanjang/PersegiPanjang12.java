@@ -9,5 +9,10 @@ public class PersegiPanjang12 {
     this.lebar = lebar;
         
     }
+
+    public PersegiPanjang12() {
+    }
+
+   
 }
 
