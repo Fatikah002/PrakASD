@@ -8,7 +8,8 @@ public class MainPangkat12 {
         System.out.println("====================================");
         System.out.println("Masukkan jumlah elemen yang dihitung : ");
         int elemen = sc12.nextInt();
-
+        
+        
         Pangkat12[] png = new Pangkat12[elemen];
         for (int i = 0; i < elemen; i++) {
             png[i] = new Pangkat12();

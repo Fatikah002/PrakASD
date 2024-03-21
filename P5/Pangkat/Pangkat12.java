@@ -12,16 +12,16 @@ public class Pangkat12 {
     }
 
     int pangkatDC(int a, int n){
-        if (n == 0) {
-            return 1;
+        if (n == 1) {
+            return a;
         }
         else{
             int hasil = pangkatDC(a, n/2);
             if (n%2==1) {
-                return (hasil * hasil * a);
+                return (pangkatDC(a, n/2)* pangkatDC(a, n/2) * a);
             }
             else{
-                 return (hasil * hasil);
+                 return (pangkatDC(a, n/2)* pangkatDC(a, n/2));
             }
         }
     }
