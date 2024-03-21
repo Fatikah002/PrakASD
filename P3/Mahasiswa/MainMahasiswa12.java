@@ -27,6 +27,16 @@ public static void main(String[] args) {
        System.out.println("Jenis kelamin  : " + mhsArray[i].jenisKelamin);
        System.out.println("Nilai IPK      : " + mhsArray[i].ipk);
     }
-}
-    
+
+    double totalIPK = Mahasiswa12.hitungTotalIPK(mhsArray);
+    double rataIPK = totalIPK / mhsArray.length;
+    System.out.println("\nRata-rata IPK semua mahasiswa: " + rataIPK);
+
+    Mahasiswa12 mhsIpkTerbesar = Mahasiswa12.ipkTerbesar(mhsArray);
+    System.out.println("\nData mahasiswa dengan IPK terbesar:");
+    System.out.println("Nama           : " + mhsIpkTerbesar.nama);
+    System.out.println("NIM            : " + mhsIpkTerbesar.nim);
+    System.out.println("Jenis kelamin  : " + mhsIpkTerbesar.jenisKelamin);
+    System.out.println("Nilai IPK      : " + mhsIpkTerbesar.ipk);
+    }
 }
