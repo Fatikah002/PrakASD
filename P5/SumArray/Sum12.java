@@ -17,15 +17,15 @@ public class Sum12 {
         return total;
     }
 
-    double totalDC( int l, int r){
+    double totalDC(double arr[], int l, int r){
         if (l == r) {
-            return keuntungan[l];
-        } else if (l < r) {
-            int mid = l + (r-l)/2;
-            double lsum = totalDC(l, mid);
-            double rsum = totalDC( mid + 1, r);
+            return arr[l];
+        } else {
+            int mid = ( l + r )/2;
+            double lsum = totalDC(arr,l, mid);
+            double rsum = totalDC(arr,  mid + 1, r);
             return lsum+rsum;
         }
-        return 0;
+       
     }
 }

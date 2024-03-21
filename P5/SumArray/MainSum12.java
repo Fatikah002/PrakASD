@@ -8,7 +8,6 @@ public class MainSum12 {
         System.out.print("Masukkan jumlah bulan : ");
         int elm = sc12.nextInt();
 
-        
         Sum12 sm = new Sum12(elm);
         System.out.println("==================================================================");
         for (int i = 0; i <sm.elemen; i++) {
@@ -21,6 +20,6 @@ public class MainSum12 {
         System.out.println("Total keuntungan perusahaan selama "+ sm.elemen + " bulan adalah " + sm.totalBF(sm.keuntungan));
         System.out.println("==================================================================");
         System.out.println("Algoritma Divide Conquer");
-        System.out.println("Total keuntungan perusahaan selama " + sm.elemen + " bulan adalah " + sm.totalDC(0, sm.elemen - 1));
+        System.out.printf("Total keuntungan perusahaan selama %d bulan adalah %.2f\n ", sm.elemen, sm.totalDC(sm.keuntungan, 0, sm.elemen - 1));
     }   
 }
