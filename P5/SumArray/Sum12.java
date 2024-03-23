@@ -2,7 +2,7 @@ package P5.SumArray;
 
 public class Sum12 {
     int elemen;
-    double keuntungan[], total;
+    double keuntungan[], total = 0;
     
     Sum12(int elemen){
         this.elemen = elemen;
@@ -27,5 +27,20 @@ public class Sum12 {
             return lsum+rsum+arr[mid ];
         }
        return 0;
+    }
+
+    void setKeuntungan(int bulan, double keuntungan){
+        this.keuntungan[bulan - 1] = keuntungan;
+    }
+
+    double keuntunganBF(){
+        for (int i = 0; i < elemen; i++) {
+            total += keuntungan[i];
+        }
+        return total;
+    }
+
+    double keuntunganDC(){
+        return totalDC(keuntungan, 0, elemen - 1);
     }
 }
