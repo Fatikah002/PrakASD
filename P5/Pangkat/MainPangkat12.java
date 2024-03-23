@@ -12,13 +12,14 @@ public class MainPangkat12 {
         
         Pangkat12[] png = new Pangkat12[elemen];
         for (int i = 0; i < elemen; i++) {
-            png[i] = new Pangkat12();
+            // png[i] = new Pangkat12();
             System.out.println("Masukkan nilai yang hendak dipangkatkan : ");
             int nilai = sc12.nextInt();
-            png[i].nilai = nilai;
+            // png[i].nilai = nilai;
             System.out.println("Masukkan nilai pemangkat : ");
             int pangkat = sc12.nextInt();
-            png[i].pangkat = pangkat;
+            // png[i].pangkat = pangkat;
+            png[i] = new Pangkat12(nilai, pangkat);
         }
 
         System.out.println("HASIL PANGKAT - BRUTE FORCE");
