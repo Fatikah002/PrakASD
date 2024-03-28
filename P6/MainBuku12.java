@@ -30,5 +30,10 @@ public class MainBuku12 {
         listBuku12.selectionSort();
         listBuku12.tampil();
 
+        System.out.println(" ********************** ");
+        System.out.println("Data setelah diurutkan secara Asc berdasarkan stock Menggunakan insertion short");
+        listBuku12.insertionSort();
+        listBuku12.tampil();
+
     }
 }
