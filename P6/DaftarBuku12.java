@@ -31,9 +31,20 @@ public class DaftarBuku12 {
                 }
             }
         }
-
         
-
-
-}
+        void selectionSort() {
+            for (int i = 0; i < listBk.length - 1; i++) { //membandingkan index
+            int idxMax = i;
+                for (int j = i + 1; j < listBk.length; j++) { //melakukan perbandingan 1 per 1
+                    if (listBk[j].stock > listBk[idxMax]. stock) {
+                    idxMax = j;
+                    }
+                }
+            // swap
+            Buku12 tempBuku = listBk[idxMax];
+            listBk[idxMax] = listBk[i];
+            listBk[i] = tempBuku;
+            }
+        }
+    }
 

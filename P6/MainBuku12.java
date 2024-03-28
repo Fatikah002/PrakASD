@@ -25,7 +25,10 @@ public class MainBuku12 {
         listBuku12.bubbleSort();
         listBuku12.tampil();
 
-       
+        System.out.println(" ********************** ");
+        System. out. println("Data setelah diurutkan secara Desc berdasarkan stock Menggunakan selection short");
+        listBuku12.selectionSort();
+        listBuku12.tampil();
 
     }
 }
