@@ -50,4 +50,13 @@ public class PencarianBuku12 {
             System.out.println("data " + x + " tidak ditemukan");
         }
     }
+    public Buku12 findBuku(int cari) {
+        for (Buku12 buku : listBk) {
+            if (buku != null && buku.kodeBuku == cari) {
+                return buku;
+            } 
+        }
+         return null;
+    }
 }
+
