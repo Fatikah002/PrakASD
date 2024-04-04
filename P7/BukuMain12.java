@@ -33,13 +33,19 @@ public class BukuMain12 {
         System.out.print("Kode Buku : ");
         int cari = s.nextInt();
         System.out.println("menggunakan sequential Search");
-        Buku12 bukuDitemukan = data.findBuku(cari);
+        // Buku12 bukuDitemukan = data.findBuku(cari);
         int posisi = data.findSeqSearch(cari);
         data.tampilPosisi(cari, posisi);
         data.tampilData(cari, posisi);
         
-        if (bukuDitemukan != null) {
-            bukuDitemukan.tampilDataBuku();
-        } 
+        // if (bukuDitemukan != null) {
+        //     bukuDitemukan.tampilDataBuku();
+        // } 
+
+        System. out. println("=============================");
+        System.out.println("menggunakan binary Search");
+        posisi = data.FindBinarySearch(cari, 0, jumBuku - 1);
+        data.tampilPosisi(cari, posisi);
+        data.tampilData(cari, posisi);
     }
 }
