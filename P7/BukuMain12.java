@@ -10,22 +10,17 @@ public class BukuMain12 {
 
         System.out.println("______________________________________________");
         System.out.println("Masukkan data Buku secara Urut dari kodeBuku Terkecil : ");
-        for (int i = 0; i < jumBuku; i++) {
-            System.out.println("_______________________");
-            System.out.print("Kode Buku \t: ");
-            int kodeBuku = s.nextInt();
-            System.out.print("Judul buku \t: ");
-            String judulBuku = s12.nextLine();
-            System.out.print("Tahun terbit \t: ");
-            int tahunTerbit = s.nextInt();
-            System.out.print("Pengarang \t: ");
-            String pengarang = s12.nextLine();
-            System.out.print("Stock     \t: ");
-            int stock = s.nextInt();
+        Buku12 m = new Buku12(123,"Algoritma" , 2019, "Wahyuni", 5);
+        Buku12 m1 = new Buku12(111, "Big Data", 2020, "Susilo", 3);
+        Buku12 m2 = new Buku12(127, "Desain UI", 2021, "Supriadi", 3);
+        Buku12 m3 = new Buku12(126, "Web Programming", 2022, "Pustaka Adi", 2);
+        Buku12 m4 = new Buku12(125, "Etika Mahasiswa", 2023, "Darmawan Adi", 2);
 
-            Buku12 m = new Buku12(kodeBuku, judulBuku, tahunTerbit, pengarang, stock);
-            data.tambah(m);
-        }
+        data.tambah(m);
+        data.tambah(m1);
+        data.tambah(m2);
+        data.tambah(m3);
+        data.tambah(m4);
 
         System.out.println("______________________________________________");
         System.out.println("Data keseluruhan Buku : ");
@@ -41,6 +36,7 @@ public class BukuMain12 {
         int posisi = data.findSeqSearch(cari);
         data.tampilPosisi(cari, posisi);
         data.tampilData(cari, posisi);
+        
 
     }
 }
