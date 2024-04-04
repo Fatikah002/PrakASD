@@ -35,9 +35,9 @@ public class BukuMain12 {
         System.out.println("menggunakan sequential Search");
         Buku12 bukuDitemukan = data.findBuku(cari);
         int posisi = data.findSeqSearch(cari);
-        data.tampilData(cari, posisi);
         data.tampilPosisi(cari, posisi);
-
+        data.tampilData(cari, posisi);
+        
         if (bukuDitemukan != null) {
             bukuDitemukan.tampilDataBuku();
         } 
