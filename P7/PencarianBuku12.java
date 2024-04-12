@@ -19,18 +19,29 @@ public class PencarianBuku12 {
         }
     }
 
-    public int findSeqSearch(int cari){
+    // public int findSeqSearch(int cari){
+    //     int posisi = -1;
+    //     for (int j = 0; j < listBk.length; j++) {
+    //         if (listBk[j].kodeBuku == cari) {
+    //             posisi  = j ;
+    //             break;
+    //         }
+    //     }
+    // return posisi;
+    // }
+
+    public int findSeqSearch(String cari) {
         int posisi = -1;
         for (int j = 0; j < listBk.length; j++) {
-            if (listBk[j].kodeBuku == cari) {
+            if (listBk[j].kodeBuku.equals(cari) ) {
                 posisi  = j ;
                 break;
             }
         }
-    return posisi;
+        return posisi;
     }
 
-    public void tampilPosisi(int x, int pos){
+    public void tampilPosisi(String x, int pos){
         if (pos != -1) {
             System.out.println("data : " + x + " ditemukan pada indeks " + pos);
         } else {
@@ -39,7 +50,7 @@ public class PencarianBuku12 {
 
     }
 
-    public void tampilData(int x, int pos){
+    public void tampilData(String x, int pos){
         if (pos != -1) {
             System.out.println("Kode Buku   \t : " +x );
             System.out.println("Judul       \t : "+listBk[pos]. judulBuku);
@@ -50,28 +61,54 @@ public class PencarianBuku12 {
             System.out.println("data " + x + " tidak ditemukan");
         }
     }
-    public Buku12 findBuku(int cari) {
+
+    // public Buku12 findBuku(int cari) {
+    //     for (Buku12 buku : listBk) {
+    //         if (buku != null && buku.kodeBuku == cari) {
+    //             return buku;
+    //         } 
+    //     }
+    //      return null;
+    // }
+
+    public Buku12 findBuku(String cari) {
         for (Buku12 buku : listBk) {
-            if (buku != null && buku.kodeBuku == cari) {
+            if (buku != null && (buku.kodeBuku).equals(cari)) {
                 return buku;
-            } 
+            }
         }
-         return null;
+        return null;
     }
 
-    public int FindBinarySearch(int cari, int left, int right) {
+//     public int FindBinarySearch(int cari, int left, int right) {
+//         int mid;
+//         if (right >= left) {
+//         mid = (left + right) / 2;
+//         if (cari == listBk[mid]. kodeBuku) {
+//             return (mid);
+//         } else if (listBk[mid]. kodeBuku < cari) {
+//             return FindBinarySearch(cari, left, mid - 1);
+//         } else {
+//             return FindBinarySearch(cari, mid + 1, right);
+//         }
+//     }
+//         return -1;
+//     }
+
+    public int findBinarySearch(String cari, int left, int right) {
         int mid;
         if (right >= left) {
-        mid = (left + right) / 2;
-        if (cari == listBk[mid]. kodeBuku) {
-            return (mid);
-        } else if (listBk[mid]. kodeBuku < cari) {
-            return FindBinarySearch(cari, left, mid - 1);
-        } else {
-            return FindBinarySearch(cari, mid + 1, right);
+            mid = (left + right) / 2;
+            int compare = listBk[mid].kodeBuku.compareTo(cari);
+            
+            if (compare == 0) {
+                return mid;
+            } else if (compare <  0) {
+                return findBinarySearch(cari, left, mid - 1);
+            } else {
+                return findBinarySearch(cari, mid + 1, right);
+            }
         }
-    }
         return -1;
     }
 }
-
