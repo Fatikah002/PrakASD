@@ -6,7 +6,7 @@ public class BukuMain12 {
         Scanner s12 = new Scanner(System.in);
 
         PencarianBuku12 data = new PencarianBuku12();
-        int jumBuku = 5;
+        int jumBuku = 6;
 
         System.out.println("______________________________________________");
         System.out.println("Masukkan data Buku secara Urut dari kodeBuku Terkecil : ");
@@ -15,12 +15,15 @@ public class BukuMain12 {
         Buku12 m2 = new Buku12("125", "Desain UI", 2021, "Supriadi", 3);
         Buku12 m3 = new Buku12("126", "Web Programming", 2022, "Pustaka Adi", 2);
         Buku12 m4 = new Buku12("127", "Etika Mahasiswa", 2023, "Darmawan Adi", 2);
-        
+        Buku12 m5 = new Buku12("128", "Big Data", 2020,"Susilo",3);
+       
         data.tambah(m);
         data.tambah(m1);
         data.tambah(m2);
         data.tambah(m3);
         data.tambah(m4);
+        data.tambah(m5);
+
         data.bubbleSortJudul();
 
         System.out.println("______________________________________________");

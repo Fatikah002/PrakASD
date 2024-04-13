@@ -1,7 +1,7 @@
 package P7;
 
 public class PencarianBuku12 {
-    Buku12 listBk[] = new Buku12[5];
+    Buku12 listBk[] = new Buku12[6];
     int idx;
 
     void tambah (Buku12 m){
@@ -33,6 +33,16 @@ public class PencarianBuku12 {
     public void tampilPosisi(String x, int pos){
         if (pos != -1) {
             System.out.println("data : " + x + " ditemukan pada indeks " + pos);
+            boolean lebihDariSatu = false;
+            for (int i = 0; i < listBk.length; i++) {
+                if (i != pos && listBk[i].judulBuku.equalsIgnoreCase(x)) {
+                    lebihDariSatu = true;
+                    System.out.println("Indeks lain dengan judul yang sama: " + i);
+                }
+            }
+            if (lebihDariSatu) {
+                System.out.println("Peringatan: ditemukan judul buku lebih dari satu!!! \"" + x + "\"");
+            }
         } else {
             System.out.println("data " + x + " tidak ditemukan");
         }
