@@ -41,7 +41,7 @@ public class Gudang12 {
         if (!cekKosong()) {
             Barang12 delete = tumpukan[top];
             top--;
-            System.out.println("Barng " + delete.nama + " diambil dari gudang.");
+            System.out.println("Barang " + delete.nama + " diambil dari gudang.");
             return delete;
         } else {
             System.out.println("Tumpukan barang kosong.");
@@ -63,10 +63,9 @@ public class Gudang12 {
     public void tampilkanBarang() {
         if (!cekKosong()) {
         System.out.println("Rincian tumpukan barang di Gudang:");
-        for (int i = 0; i <= top; i++) {
-        System.out.printf("Kode %d: %s (Kategori %s)\n", tumpukan[i].kode, tumpukan[i].nama,
-        tumpukan[i].kategori);
-        }
+            for (int i = top; i >= 0; i--) {
+                System.out.printf("Kode %d: %s (Kategori %s)\n", tumpukan[i].kode, tumpukan[i].nama,tumpukan[i].kategori);
+            }
         } else {
         System.out.println("Tumpukan barang kosong.");
         }

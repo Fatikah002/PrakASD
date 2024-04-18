@@ -31,11 +31,11 @@ public class Utama12 {
             gudang.ambilBarang();
             break;
         case 3:
-            gudang. tampilkanBarang();
+            gudang.tampilkanBarang();
             break;
         case 4:
             break;
-        default:
+            default:
             System.out.println("Pilihan tidak valid. Silakan coba lagi.");
         }
     }
