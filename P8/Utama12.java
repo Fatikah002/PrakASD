@@ -10,7 +10,8 @@ public class Utama12 {
         System.out.println("1. Tambah barang");
         System.out.println("2. Ambil barang");
         System.out.println("3. Tampilkan tumpukan barang");
-        System.out.println("4. Keluar");
+        System.out.println("4. Lihat barang teratas");
+        System.out.println("5. Keluar");
         System.out.print("Pilih operasi: ");
         int pilihan = sc12.nextInt();
         sc12.nextLine();
@@ -33,9 +34,13 @@ public class Utama12 {
         case 3:
             gudang.tampilkanBarang();
             break;
-        case 4:
+            case 4:
+            gudang.lihatBarangTeratas();
+            break;
+        case 5:
             break;
             default:
+
             System.out.println("Pilihan tidak valid. Silakan coba lagi.");
         }
     }
