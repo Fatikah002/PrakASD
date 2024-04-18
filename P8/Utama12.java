@@ -2,8 +2,10 @@ package P8;
 import java.util.Scanner;
 public class Utama12 {
     public static void main(String[] args) {
-    Gudang12 gudang = new Gudang12(7);
     Scanner sc12 = new Scanner(System.in);
+    System.out.print("Masukkan kapasitas gudang: ");
+    int kapasitasGudang = sc12.nextInt();
+    Gudang12 gudang = new Gudang12(kapasitasGudang);
 
     while (true) {
         System.out.println("\nMenu:");
@@ -40,7 +42,6 @@ public class Utama12 {
         case 5:
             break;
             default:
-
             System.out.println("Pilihan tidak valid. Silakan coba lagi.");
         }
     }
