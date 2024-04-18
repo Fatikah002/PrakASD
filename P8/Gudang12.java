@@ -5,13 +5,13 @@ public class Gudang12 {
     int size;
     int top;
 
-    public Gudang12(int kapasitas){
+    public Gudang12(int kapasitas) {
         size = kapasitas;
         tumpukan = new Barang12[size];
         top = -1;
     }
 
-    public boolean cekKosong(){
+    public boolean cekKosong() {
         if (top == -1) {
             return true;
         } else {
@@ -19,15 +19,15 @@ public class Gudang12 {
         }
     }
 
-    public boolean cekPenuh(){
-        if (top == size -1) {
+    public boolean cekPenuh() {
+        if (top == size - 1) {
             return true;
         } else {
             return false;
         }
     }
 
-    public void tambahBarang(Barang12 brg){
+    public void tambahBarang(Barang12 brg) {
         if (!cekPenuh()) {
             top++;
             tumpukan[top] = brg;
@@ -37,12 +37,12 @@ public class Gudang12 {
         }
     }
 
-    public Barang12 ambilBarang(){
+    public Barang12 ambilBarang() {
         if (!cekKosong()) {
             Barang12 delete = tumpukan[top];
             top--;
             System.out.println("Barang " + delete.nama + " diambil dari gudang.");
-            System.out.println("Kode unik dalam biner: "+ konversiDesimalKeBiner(delete.kode));
+            System.out.println("Kode unik dalam biner: " + konversiDesimalKeBiner(delete.kode));
             return delete;
         } else {
             System.out.println("Tumpukan barang kosong.");
@@ -50,7 +50,7 @@ public class Gudang12 {
         }
     }
 
-    public Barang12 lihatBarangTeratas(){
+    public Barang12 lihatBarangTeratas() {
         if (!cekKosong()) {
             Barang12 barangTeratas = tumpukan[top];
             System.out.println("Barang teratas: " + barangTeratas.nama);
@@ -63,12 +63,13 @@ public class Gudang12 {
 
     public void tampilkanBarang() {
         if (!cekKosong()) {
-        System.out.println("Rincian tumpukan barang di Gudang:");
+            System.out.println("Rincian tumpukan barang di Gudang:");
             for (int i = top; i >= 0; i--) {
-                System.out.printf("Kode %d: %s (Kategori %s)\n", tumpukan[i].kode, tumpukan[i].nama,tumpukan[i].kategori);
+                System.out.printf("Kode %d: %s (Kategori %s)\n", tumpukan[i].kode, tumpukan[i].nama,
+                        tumpukan[i].kategori);
             }
         } else {
-        System.out.println("Tumpukan barang kosong.");
+            System.out.println("Tumpukan barang kosong.");
         }
     }
 
@@ -80,10 +81,32 @@ public class Gudang12 {
             kode = kode / 2;
         }
         String biner = new String();
-        while (!stack. isEmpty ()) {
+        while (!stack.isEmpty()) {
             biner += stack.pop();
         }
         return biner;
+    }
+
+    public Barang12 lihatBarangTerbawah() {
+        if (!cekKosong()) {
+            Barang12 barangTerbawah = tumpukan[0];
+            System.out.println("Barang terbawah: " + barangTerbawah.nama);
+            return barangTerbawah;
+        } else {
+            System.out.println("Tumpukan barang kosong.");
+            return null;
+        }
+    }
+
+    public Barang12 cariBarang(int kodeBarang) {
+        for (int i = 0; i <= top; i++) {
+            if (tumpukan[i].kode == kodeBarang) {
+                System.out.println("Barang dengan kode " + kodeBarang + " ditemukan: " + tumpukan[i].nama);
+                return tumpukan[i];
+            }
+        }
+        System.out.println("Barang dengan kode " + kodeBarang + " tidak ditemukan.");
+        return null;
     }
 
 }
