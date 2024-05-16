@@ -133,12 +133,12 @@ public class SingleLinkedList12 {
             System.out.println("Linked list masih kosong," +
                     "tidak dapat dihapus");
         } else {
-            if (head.data == key) {
-                removeFirst();
-            }
             Node12 temp = head;
             while (temp.next != null) {
-                if (temp.next.data == key) {
+                if (head.data == key) {
+                    removeFirst();
+                    break;
+                } else if (temp.next.data == key) {
                     temp.next = temp.next.next;
                     if (temp.next == null) {
                         tail = temp;
@@ -160,10 +160,10 @@ public class SingleLinkedList12 {
             }
             temp.next = temp.next.next;
             if (temp.next == null) {
-                
+
                 tail = temp;
             }
-            
+
         }
     }
 }
