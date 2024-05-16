@@ -135,7 +135,7 @@ public class SingleLinkedList12 {
         } else {
             Node12 temp = head;
             while (temp.next != null) {
-                if (head.data == key) {
+                if (temp.data == key && temp == head) {
                     removeFirst();
                     break;
                 } else if (temp.next.data == key) {
@@ -160,7 +160,6 @@ public class SingleLinkedList12 {
             }
             temp.next = temp.next.next;
             if (temp.next == null) {
-
                 tail = temp;
             }
 
