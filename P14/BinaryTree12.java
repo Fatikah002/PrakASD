@@ -12,30 +12,30 @@ public class BinaryTree12 {
     }
 
     // void add(int data) {
-    //     if (isEmpty()) {
-    //         root = new Node12(data);
-    //     } else {
-    //         Node12 current = root;
-    //         while (true) {
-    //             if (data < current.data) {
-    //                 if (current.left != null) {
-    //                     current = current.left;
-    //                 } else {
-    //                     current.left = new Node12(data);
-    //                     break;
-    //                 }
-    //             } else if (data > current.data) {
-    //                 if (current.right != null) {
-    //                     current = current.right;
-    //                 } else {
-    //                     current.right = new Node12(data);
-    //                     break;
-    //                 }
-    //             } else {
-    //                 break;
-    //             }
-    //         }
-    //     }
+    // if (isEmpty()) {
+    // root = new Node12(data);
+    // } else {
+    // Node12 current = root;
+    // while (true) {
+    // if (data < current.data) {
+    // if (current.left != null) {
+    // current = current.left;
+    // } else {
+    // current.left = new Node12(data);
+    // break;
+    // }
+    // } else if (data > current.data) {
+    // if (current.right != null) {
+    // current = current.right;
+    // } else {
+    // current.right = new Node12(data);
+    // break;
+    // }
+    // } else {
+    // break;
+    // }
+    // }
+    // }
     // }
 
     Node12 addRekursif(Node12 current, int data) {
@@ -200,5 +200,17 @@ public class BinaryTree12 {
         }
 
         System.out.println("Nilai yang paling besar : " + current.data);
+    }
+
+    void leaf(Node12 node) {
+        if (node == null) {
+            return;
+        }
+        if (node.left == null && node.right == null) {
+            System.out.print(node.data + " ");
+        }
+
+        leaf(node.left);
+        leaf(node.right);
     }
 }

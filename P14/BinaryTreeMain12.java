@@ -31,5 +31,7 @@ public class BinaryTreeMain12 {
 
         bt.nilaiTerkecil();
         bt.nilaiTerbesar();
+        System.out.print("Data yang ada di leaf : ");
+        bt.leaf(bt.root);
     }
 }
