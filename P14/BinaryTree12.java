@@ -11,32 +11,45 @@ public class BinaryTree12 {
         return root == null;
     }
 
-    void add(int data) {
-        if (isEmpty()) {
-            root = new Node12(data);
-        } else {
-            Node12 current = root;
-            while (true) {
-                if (data < current.data) {
-                    if (current.left != null) {
-                        current = current.left;
-                    } else {
-                        current.left = new Node12(data);
-                        break;
-                    }
-                } else if (data > current.data) {
-                    if (current.right != null) {
-                        current = current.right;
-                    } else {
-                        current.right = new Node12(data);
-                        break;
-                        
-                    }
-                } else {
-                    break;
-                }
-            }
+    // void add(int data) {
+    // if (isEmpty()) {
+    // root = new Node12(data);
+    // } else {
+    // Node12 current = root;
+    // while (true) {
+    // if (data < current.data) {
+    // if (current.left != null) {
+    // current = current.left;
+    // } else {
+    // current.left = new Node12(data);
+    // break;
+    // }
+    // } else if (data > current.data) {
+    // if (current.right != null) {
+    // current = current.right;
+    // } else {
+    // current.right = new Node12(data);
+    // break;
+
+    // }
+    // } else {
+    // break;
+    // }
+    // }
+    // }
+    // }
+
+    Node12 addRekursif(Node12 current, int data) {
+        if (current == null) {
+            return new Node12(data);
         }
+
+        if (data < current.data) {
+            current.left = addRekursif(current.left, data);
+        } else if (data > current.data) {
+            current.right = addRekursif(current.right, data);
+        }
+        return current;
     }
 
     boolean find(int data) {
