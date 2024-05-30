@@ -33,5 +33,8 @@ public class BinaryTreeMain12 {
         bt.nilaiTerbesar();
         System.out.print("Data yang ada di leaf : ");
         bt.leaf(bt.root);
+        System.out.println("");
+        System.out.print("Jumlah leaf : ");
+        System.out.println(bt.jumlahLeaf(bt.root));
     }
 }

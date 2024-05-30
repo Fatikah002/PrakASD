@@ -213,4 +213,17 @@ public class BinaryTree12 {
         leaf(node.left);
         leaf(node.right);
     }
+
+    int jumlahLeaf(Node12 node){
+        if (node == null) {
+            return 0;
+        }
+        if (node.left == null && node.right == null) {
+            return 1;
+        }
+
+        int jmlKiri = jumlahLeaf(node.left);
+        int jmlKanan = jumlahLeaf(node.right);
+        return jmlKiri + jmlKanan;
+    }
 }
