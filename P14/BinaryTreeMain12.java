@@ -28,5 +28,8 @@ public class BinaryTreeMain12 {
         System.out.print("PreOrder Traversal : ");
         bt.traversePreOrder(bt.root);
         System.out.println("");
+
+        bt.nilaiTerkecil();
+        bt.nilaiTerbesar();
     }
 }
