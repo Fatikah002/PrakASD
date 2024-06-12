@@ -25,7 +25,7 @@ public class GraphMatriks12 {
                     System.out.print("Gedung " + (char) ('A' + j) + " (" + matriks[i][j] + "m), ");
                 }
             }
-            System.out.println(); 
+            System.out.println();
         }
     }
 
@@ -45,5 +45,9 @@ public class GraphMatriks12 {
         System.out.println("InDegree dari Gedung " + (char) ('A' + asal) + ": " + inDegree);
         System.out.println("OutDegree dari Gedung " + (char) ('A' + asal) + ": " + outDegree);
         System.out.println("Degree dari Gedung " + (char) ('A' + asal) + ": " + (inDegree + outDegree) + ("\n"));
+    }
+
+    public boolean cekEdge(int asal, int tujuan) {
+        return matriks[asal][tujuan] != 0;
     }
 }
