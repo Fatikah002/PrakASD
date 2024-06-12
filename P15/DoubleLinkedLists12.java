@@ -163,4 +163,19 @@ public class DoubleLinkedLists12 {
         size--;
     }
 
+    public void updateJarak(int tujuan, int jarak) throws Exception {
+        if (isEmpty()) {
+            throw new Exception("Linked List masih kosong, tidak dapat diupdate!");
+        }
+        Node12 current = head;
+        while (current != null) {
+            if (current.data == tujuan) {
+                current.jarak = jarak;
+                return;
+            }
+            current = current.next;
+        }
+    }
 }
+
+
