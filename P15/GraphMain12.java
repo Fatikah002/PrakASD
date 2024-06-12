@@ -44,5 +44,9 @@ public class GraphMain12 {
         System.out.println("Hasil setelah penghapusan edge");
         gdg.removeEdge(2, 1);
         gdg.printGraph();
+
+        for (int i = 0; i < gdg.vertex; i++) {
+            gdg.degree(i);
+        }
     }
 }
