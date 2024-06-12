@@ -81,4 +81,12 @@ public class Graph12 {
         list[asal].updateJarak(tujuan, jarak);
     }
 
+    public int hitungEdge() {
+        int jumlahEdge = 0;
+        for (int i = 0; i < vertex; i++) {
+            jumlahEdge += list[i].size();
+        }
+        return jumlahEdge;
+    }
+
 }

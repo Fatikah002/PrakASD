@@ -94,6 +94,9 @@ public class GraphMain12 {
         System.out.println("Jarak setelah di update");
         gedung.printGraph();
 
+        int jumlahEdge = gedung.hitungEdge();
+        System.out.println("Jumlah Edge dalam Graph: " + jumlahEdge);
+
 
   }
 }
